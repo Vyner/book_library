@@ -7,7 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BookRepository extends JpaRepository<BookInfo, Long> {
 
-    Long store(BookInfo bookInfo);
-
-
 }

@@ -19,7 +19,7 @@ public class BookService {
         String uuid = UUID.randomUUID().toString();
         bookInfo.setId(uuid);
 
-        bookRepository.store(bookInfo);
+        bookRepository.save(bookInfo);
 
         return uuid;
     }

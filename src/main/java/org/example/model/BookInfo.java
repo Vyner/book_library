@@ -1,7 +1,14 @@
 package org.example.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "book_info")
 public class BookInfo {
 
+    @Id
     private String id;
 
     private String name;
@@ -15,6 +22,7 @@ public class BookInfo {
         this.price = price;
         this.author = author;
     }
+
 
     public BookInfo(String name, long price, String author) {
         this.name = name;

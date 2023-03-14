@@ -25,8 +25,7 @@ class BookServiceTest {
     void store() {
         BookInfo bookInfo = new BookInfo("testBook", 1L, "testAuthor");
 
-        Mockito.when(bookRepository.store(any(BookInfo.class)))
-                .thenReturn(1L);
+        Mockito.when(bookRepository.save(any(BookInfo.class))).thenReturn(bookInfo);
 
         Assertions.assertNotEquals(0, bookService.store(bookInfo).length());
     }

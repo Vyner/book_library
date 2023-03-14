@@ -37,7 +37,7 @@ public class BookControllerTest {
                 "   \"author\":\"testAuthor\"\n" +
                 "}";
 
-        Mockito.when(bookService.store(any(BookInfo.class))).thenReturn(1);
+        Mockito.when(bookService.store(any(BookInfo.class))).thenReturn("1");
 
         MvcResult mvcResult = mockMvc.perform(post("/store")
                         .contentType(MediaType.APPLICATION_JSON)

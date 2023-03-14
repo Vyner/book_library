@@ -13,7 +13,7 @@ public class BookController {
     private final BookService bookService;
 
     @PostMapping("/store")
-    int store(@RequestBody BookInfo bookInfo){
+    String store(@RequestBody BookInfo bookInfo){
         return bookService.store(bookInfo);
     }
 
